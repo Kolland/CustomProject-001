@@ -1,0 +1,16 @@
+#Ignore node_modules folder
+
+node_modules
+.sass-cache
+.idea
+
+bower_components
+**.sass-cache
+files
+**.7z
+**.rar
+
+#Ignore for dev branch
+dist/css/
+#dist/js/script.js
+dist/*.html
