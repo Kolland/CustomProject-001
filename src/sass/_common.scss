@@ -18,3 +18,16 @@ body {
 .bg-color-viridian {
   background-color: $c-viridian;
 }
+.bg-color-atlantis {
+  background-color: $c-atlantis;
+}
+
+// blocks shadow
+.shadow {
+  &--top-inner {
+    box-shadow: inset 0px 6px 8px -6px rgba($c-black, 0.7);
+  }
+  &--bottom-outher {
+    box-shadow: 0px 6px 8px -6px rgba($c-black, 0.7);
+  }
+}
