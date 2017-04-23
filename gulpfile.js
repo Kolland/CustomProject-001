@@ -60,6 +60,7 @@ gulp.task('sass', function() {
   return gulp.src('./src/sass/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expanded'}).on('error', function(err) {
+      this.emit('end');
       return notify().write(err);
     }))
     .pipe(autoprefixer({
@@ -73,7 +74,7 @@ gulp.task('sass', function() {
 
 // nunjucks template + htmlbeautify
 gulp.task('nunjucks', function() {
-  return gulp.src('src/pages/**/*.html')
+  return gulp.src('src/pages/**/*.njk')
     .pipe(plumber())
     .pipe(nunjucksRender({
       path: ['src/templates/']
@@ -97,19 +98,14 @@ gulp.task('svg-o', function() {
 });
 
 // svg sprite
-gulp.task('svgstore', function() {
+gulp.task('svg-sprite', function() {
   return gulp
     .src('src/svg/sprite/*.svg')
     .pipe(svgmin({
-      removeDoctype: false
+      removeDoctype: true
     }))
     .pipe(svgstore())
-    .pipe(svgmin({
-      js2svg: {
-        pretty: true
-      }
-    }))
-    .pipe(gulp.dest('dist/img/'));
+    .pipe(gulp.dest('src/templates/partials/'));
 });
 
 // watcher
@@ -120,6 +116,6 @@ gulp.task('watch', function() {
     }
   });
   gulp.watch('src/sass/*.scss', ['sass']);
-  gulp.watch(['src/pages/**/*.html', 'src/templates/**/*.html'], ['nunjucks']);
+  gulp.watch(['src/pages/**/*.njk', 'src/templates/**/*.njk'], ['nunjucks']);
   gulp.watch(['dist/js/*.js']).on('change', browserSync.reload);
 });

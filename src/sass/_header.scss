@@ -1,0 +1,117 @@
+.main-header {
+  &__top-line {
+    padding: 2px 0;
+	}
+  &__main-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+	}
+}
+.ml-logo {
+  width: 87px;
+  height: 38px;
+}
+.main-menu {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+.menu-item {
+  display: inline-block;
+  a {
+    margin-left: 15px;
+    transition: 250ms ease-in;
+    transition-property: color;
+    color: rgba($c-white, 1);
+    font-size: 12px;
+    text-decoration: none;
+    &:hover {
+      color: rgba($c-white, 0.7);
+    }
+  }
+}
+
+// mobile menu style
+.nav-menu-icon {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: $c-white;
+  }
+}
+.mm-menu {
+  &.mm-theme-black {
+    background-color: $c-viridian;
+  }
+  .mm-btn {
+    &.mm-close {
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  &__link {
+    display: inline-block;
+    transition: 250ms ease-in;
+    transition-property: color;
+    color: $text-color;
+    font-size: 12px;
+    line-height: 12px;
+    text-decoration: none;
+    vertical-align: middle;
+    & + & {
+      &:before {
+        display: inline-block;
+        margin: 0 15px 0 12px;
+        font-size: 15px;
+        content: '|';
+        vertical-align: middle;
+      }
+    }
+    &:hover {
+      color: $c-viridian;
+      &:before {
+        color: $text-color;
+      }
+    }
+  }
+}
+
+.cart-icon {
+  width: 20px;
+  height: 21px;
+  transition: inherit;
+  transition-property: fill, stroke;
+  vertical-align: middle;
+  fill: none;
+  stroke: $c-black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  &__text {
+    transition: inherit;
+    font-weight: 700;
+    fill: $text-color;
+    stroke: none;
+  }
+  &:hover {
+    stroke: $c-viridian;
+    .cart-icon__text {
+      fill: $c-viridian;
+    }
+  }
+}

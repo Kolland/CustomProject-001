@@ -1,0 +1,20 @@
+body {
+  background-color: $body-bg-color;
+  color: $text-color;
+  font-family: $f-primary;
+}
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.svg-sprite {
+  display: none;
+}
+
+// blocks backgrounds
+.bg-color-viridian {
+  background-color: $c-viridian;
+}
