@@ -1,0 +1,79 @@
+.header-slider {
+  height: calc(100vh - 90px);
+  @media screen and (max-width: 768px) {
+    height: calc(100vh - 60px);
+  }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    height: auto;
+  }
+  &__slide {
+    background-position: center;
+    background-size: cover;
+    .container {
+      height: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-top: 30px;
+    max-width: 500px;
+  }
+  &__title {
+    font-family: $f-second;
+    font-size: 50.8px;
+    font-weight: bold;
+    color: $c-viridian;
+    text-transform: uppercase;
+    margin: 0;
+    @media screen and (max-width: 768px) {
+      margin: 10px 0;
+      font-size: 36px;
+    }
+  }
+  &__desc {
+    font-size: 20.4px;
+    font-weight: 300;
+    color: #222221;
+    text-transform: uppercase;
+    margin: 55px 0;
+    b {
+      font-weight: 500;
+      color: $c-viridian;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      margin: 25px 0;
+    }
+
+  }
+  &__slide-btn {
+    text-align: center;
+  }
+}
+
+.head-tip {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  &__content {
+    max-width: 255px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    padding: 20px 60px;
+    background-color: $c-atlantis;
+    @media screen and (max-width: 768px) {
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+}

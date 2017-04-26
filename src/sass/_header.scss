@@ -1,4 +1,10 @@
+.ml-logo {
+  width: 87px;
+  height: 38px;
+}
 .main-header {
+  position: relative;
+  z-index: 2;
   &__top-line {
     padding: 2px 0;
 	}
@@ -7,12 +13,18 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
+    @media screen and (max-width: 768px) {
+      padding: 5px 0;
+    }
 	}
+  &__logo {
+    @media screen and (max-width: 768px) {
+      width: 43px;
+      height: 19px;
+    }
+  }
 }
-.ml-logo {
-  width: 87px;
-  height: 38px;
-}
+
 .main-menu {
   @media screen and (max-width: 768px) {
     display: none;
