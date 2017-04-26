@@ -5,19 +5,24 @@
     justify-content: space-between;
     margin-top: 75px;
     margin-bottom: 100px;
+    &--marg-btm-sm {
+      margin-bottom: 60px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
   }
   &__left-side,
   &__right-side {
     width: 47%;
-    @media screen and (max-width: 768px) {
-      width: 100%;
-    }
-  }
-  &__left-side {
     font-size: 12px;
     text-align: justify;
     p {
       margin: 20px 0;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
     }
   }
   &__big-text {
@@ -36,5 +41,8 @@
   &__btns-group {
     display: flex;
     justify-content: space-between;
+    &--marg-bot {
+      margin-bottom: 75px;
+    }
   }
 }

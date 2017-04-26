@@ -112,3 +112,16 @@ body {
     border-bottom: 1px solid $c-viridian;
   }
 }
+
+// Slogan
+.slogan {
+  text-align: center;
+  color: $c-viridian;
+  font-family: $f-second;
+  font-size: 28px;
+  margin-bottom: 60px;
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
