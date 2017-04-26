@@ -11,6 +11,6 @@ files
 **.rar
 
 #Ignore for dev branch
-dist/css/
+#dist/css/
 #dist/js/script.js
-dist/*.html
+#dist/*.html
