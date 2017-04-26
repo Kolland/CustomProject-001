@@ -9,6 +9,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
+  position: relative;
   &--sm {
     max-width: 600px;
   }
@@ -39,7 +40,7 @@ body {
     box-shadow: inset 0px 6px 8px -6px rgba($c-black, 0.7);
   }
   &--bottom-outher {
-    box-shadow: 0px 6px 8px -6px rgba($c-black, 0.7);
+    box-shadow: 0px 6px 8px -6px rgba($c-black, 0.5);
   }
 }
 
