@@ -1,0 +1,27 @@
+.text-section {
+  h3 {
+    font-family: $f-second;
+    font-size: 36px;
+    font-weight: 600;
+    color: $c-viridian;
+    text-align: left;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+  figure {
+    max-width: 225px;
+    margin: 40px auto;
+    div {
+      padding-top: 100%;
+      border-radius: 50%;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  &:first-child {
+    h3 {
+      margin-top: 0;
+    }
+  }
+}

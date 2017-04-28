@@ -78,6 +78,12 @@ body {
   &:hover {
     transform: scale(.9);
   }
+  & + & {
+    margin-left: 55px;
+    @media screen and (max-width: 768px) {
+      margin-left: 20px;
+    }
+  }
 }
 
 // Custom Link
@@ -101,6 +107,7 @@ body {
     display: inline-block;
     width: 23px;
     height: 23px;
+    margin-right: 5px;
     background-image: url('../img/link-decorate.png');
     vertical-align: middle;
     transition: transform 500ms;
@@ -109,7 +116,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     transition: border-color 250ms;
-    border-bottom: 1px solid $c-viridian;
+    border-bottom: 1px solid rgba($c-viridian, 0.5);
   }
 }
 
