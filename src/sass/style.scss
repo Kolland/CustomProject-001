@@ -4,7 +4,12 @@
 // normalize
 @import '../../node_modules/normalize-scss/sass/normalize/import-now';
 
+// magnific pop-up
+@import '../../node_modules/magnific-popup/src/css/main';
+
+
 @import 'common';
+@import 'form';
 @import 'header';
 @import 'head-slider';
 @import 'balance-block';
@@ -12,4 +17,5 @@
 @import 'control-block';
 @import 'advantages';
 @import 'balance-detail';
+@import 'buy-form';
 @import 'footer';

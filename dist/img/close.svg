@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.57 18.57">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#a2a2a1;stroke-linecap:round;stroke-linejoin:round;stroke-width:.8px}
+        </style>
+    </defs>
+    <title>
+        Ресурс 1
+    </title>
+    <g id="Слой_2" data-name="Слой 2">
+        <g id="Layer_1" data-name="Layer 1">
+            <circle class="cls-1" cx="9.28" cy="9.28" r="8.89"/>
+            <path class="cls-1" d="M6.93 7.36l4.87 4.87M11.8 7.36l-4.87 4.87"/>
+        </g>
+    </g>
+</svg>

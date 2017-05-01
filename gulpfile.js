@@ -119,3 +119,8 @@ gulp.task('watch', function() {
   gulp.watch(['src/pages/**/*.njk', 'src/templates/**/*.njk'], ['nunjucks']);
   gulp.watch(['dist/js/*.js']).on('change', browserSync.reload);
 });
+
+// build
+gulp.task('build', ['sass', 'nunjucks'], function() {
+  console.log('Building files');
+});

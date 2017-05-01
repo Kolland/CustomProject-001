@@ -1,0 +1,136 @@
+.buy-form {
+  display: flex;
+  justify-content: center;
+  &__inner {
+    position: relative;
+    width: 580px;
+    padding: 100px 100px 100px 150px;
+    background-color: $c-white;
+    overflow: auto;
+  }
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border: 0;
+    background-color: transparent;
+    svg {
+      width: 27px;
+      height: 27px;
+      transition: stroke 250ms ease-in;
+      fill: none;
+      stroke: #a2a2a1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: .8px;
+    }
+    &:hover {
+      svg {
+        stroke: $c-black;
+      }
+    }
+  }
+}
+.buy-table {
+  width: 580px;
+  font-family: $f-second;
+  border-collapse: collapse;
+  &__col {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    &--price {
+      width: 120px;
+      padding-top: 25px;
+      font-size: 55.1px;
+      font-weight: 600;
+      line-height: 1;
+      text-align: right;
+      vertical-align: bottom;
+    }
+    &--desc {
+      width: 80px;
+      padding-top: 25px;
+      padding-left: 15px;
+      font-size: 15.4px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    &--amount {
+      width: 110px;
+      text-align: right;
+      & > * {
+        vertical-align: middle;
+      }
+    }
+    &--action {
+      width: 235px;
+      padding-right: 15px;
+      text-align: right;
+    }
+    &--highlight {
+      color: $c-brownish-orange;
+      fill: $c-brownish-orange;
+    }
+  }
+  tr {
+    &:last-child {
+      .buy-table__col {
+        border-bottom: 0;
+      }
+    }
+  }
+  &__currency-wrap {
+    display: inline-block;
+    position: relative;
+    margin-top: 5px;
+    margin-right: -10px;
+    font-size: 18px;
+    vertical-align: top;
+  }
+  &__currency-svg {
+    width: 12px;
+    height: 17px;
+  }
+  &__price {
+    line-height: .8;
+    vertical-align: top;
+  }
+  &__discount {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 85px;
+    height: 80px;
+    transform: translate(calc(-100% - 5px), -50%);
+    text {
+      fill: white;
+      font-family: $f-second;
+    }
+  }
+}
+
+.svg-discount {
+  &__shape {
+    fill: transparent;
+    stroke: $c-brownish-orange;
+    stroke-width: 1px;
+  }
+  &__text-1,
+  &__text-2 {
+    font-size: 14px;
+    fill: $c-brownish-orange;
+  }
+  &__text-3 {
+    font-size: 35px;
+    fill: $c-brownish-orange;
+  }
+  &__text-4 {
+    font-size: 45px;
+    fill: $c-brownish-orange;
+  }
+  &__currency {
+    fill: $c-brownish-orange;
+  }
+}

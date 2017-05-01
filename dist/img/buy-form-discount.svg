@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 161.6 149">
+    <defs>
+        <style>
+            .cls-1{fill:#fff;stroke:#cc561b;stroke-miterlimit:10}.cls-2{font-size:13.91px}.cls-2,.cls-7,.cls-9{fill:#cc561b}.cls-2,.cls-7{font-family:Akrobat-SemiBold,Akrobat SemiBold;font-weight:700}.cls-3{letter-spacing:.01em}.cls-4{letter-spacing:.02em}.cls-5{letter-spacing:-.02em}.cls-6{letter-spacing:-.01em}.cls-7{font-size:35.44px}.cls-8{font-size:45px}
+        </style>
+    </defs>
+    <title>
+        Ресурс 1
+    </title>
+    <g id="Слой_2" data-name="Слой 2">
+        <g id="Layer_1" data-name="Layer 1">
+            <path class="cls-1" d="M160.9 76.67l-13.23-13.22a74 74 0 1 0-1 27.47z"/>
+            <text class="cls-2" transform="translate(56.49 96.64)">
+                за <tspan class="cls-3" x="15.64" y="0">с</tspan><tspan class="cls-4" x="22.07" y="0">у</tspan><tspan class="cls-5" x="28.92" y="0">т</tspan><tspan class="cls-6" x="34.36" y="0">о</tspan><tspan x="41.86" y="0">чный </tspan><tspan x="0" y="12">рацион</tspan>
+            </text>
+            <text class="cls-7" transform="translate(16.49 81.05)">
+                по <tspan class="cls-8" x="46.14" y="0">219</tspan>
+            </text>
+            <path class="cls-9" d="M111.78 58l-.9-.07.16-1.34c.94-.28 2 .38 2.8-.79h-2.72a9.31 9.31 0 0 1 .17-1.26c0-.11.32-.2.49-.2h3.36a2.29 2.29 0 0 0 2-1.82 1.81 1.81 0 0 0-1.71-1.81 7.7 7.7 0 0 0-3.4.41l-.42.12c.07-.79.13-1.53.23-2.26 0-.11.21-.26.34-.29a11.78 11.78 0 0 1 5.67.08A3.41 3.41 0 0 1 120 53.8a3.89 3.89 0 0 0-.17.5h1.78a7.79 7.79 0 0 1-.12 1.17c0 .12-.29.25-.45.25h-2.44c-.48 0-.76.26-1.08.71h3.83a11 11 0 0 1-.13 1.26c0 .1-.28.2-.43.21h-4.58c-.69 0-1.11.36-1.38 1.17a1.47 1.47 0 0 0 .47 1.64 3.25 3.25 0 0 0 2.67.49c.94-.16 1.85-.48 2.78-.73l.33-.07c-.06.78-.1 1.52-.2 2.25a.63.63 0 0 1-.4.42 12.35 12.35 0 0 1-5.83.25c-1.9-.5-3.46-1.84-3.19-4.28a6.61 6.61 0 0 1 .32-1.04z"/>
+        </g>
+    </g>
+</svg>

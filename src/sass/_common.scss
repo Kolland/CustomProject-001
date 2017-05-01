@@ -75,6 +75,14 @@ body {
   &--green {
     background-color: $c-viridian;
   }
+  &--light-green {
+    background-color: #7eb081;
+  }
+  &--disabled {
+    background-color: $c-brownish-orange;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
   &:hover {
     transform: scale(.9);
   }
@@ -93,22 +101,29 @@ body {
   font-size: 14px;
   font-weight: 500;
   line-height: 12px;
+  text-align: left;
   text-decoration: none;
+  position: relative;
+  padding-left: 30px;
   &:hover {
     span {
       border-color: transparent;
     }
     &:before {
-      transform: rotate(180deg);
+      transform: rotate(180deg) translateY(51%);
     }
   }
   &:before {
     content: '';
-    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-51%);
     width: 23px;
     height: 23px;
-    margin-right: 5px;
     background-image: url('../img/link-decorate.png');
+    background-repeat: no-repeat;
+    background-size: contain;
     vertical-align: middle;
     transition: transform 500ms;
   }
