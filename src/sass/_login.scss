@@ -1,20 +1,7 @@
 .login-page {
-  position: relative;
   margin-top: 50px;
   @media screen and (max-width: 768px) {
     margin-top: 20px;
-  }
-  &__separator {
-    $top-offset: 25;
-    position: absolute;
-    top: $top-offset * 1px;
-    left: 50%;
-    width: 1px;
-    height: calc(100% - (#{$top-offset} * 1px));
-    background-color: #bdbdbd;
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
   }
 }
 .social-enter {

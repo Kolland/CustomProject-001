@@ -1,0 +1,99 @@
+<div class="container">
+  <h2 class="block-title block-title--profile">Здравствуйте ALEX GREY</h2>
+  <form action="#profile-update" method="post" class="profile-form ml-form">
+    <div class="flex-grid">
+      <div class="col">
+        <section class="form-section">
+          <h3>РЕГИСТРАЦИОННЫЕ ДАННЫЕ</h3>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <input type="tel" name="phone" placeholder="Телефон" required>
+        </section>
+      </div>
+      <div class="col col--right">
+        <section class="form-section">
+          <h3>ДЛЯ НОВЫХ ПОЛЬЗОВАТЕЛЕЙ</h3>
+          <label>
+            <input type="radio" name="shipping" value="address" checked>
+            <span>Доставка по адресу</span>
+          </label>
+          <label>
+            <input type="radio" name="shipping" value="office">
+            <span>Самовывоз из отделения Новая Почта</span>
+          </label>
+        </section>
+      </div>
+    </div>
+    <div class="flex-grid">
+      <div class="col">
+        <section class="form-section">
+          <h3>СПОСОБ ОПЛАТЫ</h3>
+          <label>
+            <input type="radio" name="pay-method" value="cash" checked>
+            <span>Наличными при получении</span>
+          </label>
+          <label>
+            <input type="radio" name="pay-method" value="card">
+            <span>Карта Visa/VasterCard</span>
+          </label>
+          <!-- default hiden element, visible on pay-method radio change -->
+          <div class="card-details" data-pay-method="card">
+            <input type="number" name="card-number" placeholder="Номер карточки" required>
+            <div>
+              <span>термін дії</span>
+              <input
+                type="number"
+                name="сard-month"
+                min="1"
+                max="12"
+                required>
+              /
+              <input
+                type="number"
+                name="сard-year"
+                min="2017"
+                max="2030"
+                required>
+            </div>
+            <div>
+              <span>CVV2:</span>
+              <input
+                type="number"
+                name="сard-cvv"
+                min="0"
+                max="999"
+                required>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="col col--right">
+        <section class="form-section">
+          <h3>АДРЕС ДОСТАВКИ</h3>
+          <div data-shipping="address">
+            <input type="text" name="city" placeholder="Город" required>
+            <div class="one-line-fields">
+              <input type="text" name="street" placeholder="Улица" required>
+              <input type="text" name="home" placeholder="Дом" required>
+              <input type="text" name="apartment" placeholder="Кв.">
+            </div>
+            <textarea name="additional"></textarea>
+          </div>
+          <!-- default hiden element, visible on shipping radio change -->
+          <div data-shipping="office">
+            <input type="text" name="city" placeholder="Город" required>
+            <input type="text" name="office" placeholder="№ отделения" required>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="flex-grid">
+      <div class="col">
+        <div class="form-section">
+          <input type="submit" value="ОБНОВИТЬ">
+        </div>
+      </div>
+    </div>
+    <div class="col-separator"></div>
+  </form>
+</div>

@@ -37,4 +37,29 @@
       text-decoration: underline;
     }
   }
+  label {
+    display: flex;
+    padding: 10px 0;
+    font-size: 15.2px;
+    line-height: 1.06;
+    color: #969696;
+    span {
+      margin-left: 15px;
+    }
+  }
+  .one-line-fields {
+    display: flex;
+    justify-content: space-between;
+    input {
+      flex: 0 0 50px;
+      padding-left: 10px;
+      margin-left: 5px;
+      min-width: 0; /* hack for firefox */
+      &:first-child {
+        flex-grow: 1;
+        margin-left: 0;
+        padding-left: 30px;
+      }
+    }
+  }
 }
