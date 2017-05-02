@@ -33,8 +33,11 @@
   }
   &__icon {
     width: 60px;
-    img {
-      width: auto;
+    svg {
+      width: 50px;
+      height: 40px;
+      fill: transparent;
+      stroke: $c-atlantis;
     }
   }
 }

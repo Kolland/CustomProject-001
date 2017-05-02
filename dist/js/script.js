@@ -82,4 +82,17 @@
   toggleContent('pay-method');
   toggleContent('shipping');
 
+  /**
+   * Animate scroll to block
+   * @param {jQueryObject} $element - element that trigger scroll
+   */
+  function animateScroll($element) {
+    $element.on('click', function(e) {
+      e.preventDefault();
+      var blockOffset = $(this.hash).offset().top;
+      $('body').stop().animate({scrollTop: blockOffset}, '500', 'swing');
+    });
+  }
+  animateScroll($('.js-scroll-to'));
+
 })(jQuery);
