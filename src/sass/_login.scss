@@ -1,0 +1,44 @@
+.login-page {
+  position: relative;
+  margin-top: 50px;
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+  }
+  &__separator {
+    $top-offset: 25;
+    position: absolute;
+    top: $top-offset * 1px;
+    left: 50%;
+    width: 1px;
+    height: calc(100% - (#{$top-offset} * 1px));
+    background-color: #bdbdbd;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+.social-enter {
+  padding-left: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  &__link {
+    display: inline-block;
+    padding: 8px 12px;
+    transition: background-color 250ms ease-in;
+    border-radius: 5px;
+    background-color: #0068ac;
+    svg {
+      display: block;
+      width: 34px;
+      height: 36px;
+      fill: #fff;
+    }
+    &:hover {
+      background-color: $c-atlantis;
+    }
+  }
+}

@@ -4,12 +4,12 @@ body {
   font-family: $f-primary;
 }
 .container {
+  position: relative;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
-  position: relative;
   &--sm {
     max-width: 600px;
   }
@@ -29,7 +29,7 @@ body {
 .bg-color-orange {
   background-color: $c-brownish-orange;
 }
-.bg-color-grey {
+.bg-color-light-grey {
   background-color: $c-light-grey;
 }
 
@@ -97,14 +97,14 @@ body {
 // Custom Link
 .ml-link {
   display: inline-block;
+  position: relative;
+  padding-left: 30px;
   color: $c-viridian;
   font-size: 14px;
   font-weight: 500;
   line-height: 12px;
   text-align: left;
   text-decoration: none;
-  position: relative;
-  padding-left: 30px;
   &:hover {
     span {
       border-color: transparent;

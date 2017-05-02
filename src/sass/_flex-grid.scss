@@ -1,0 +1,22 @@
+.flex-grid {
+  display: flex;
+  .col {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    &--right {
+      align-items: flex-end;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-grid {
+    display: block;
+    .col {
+      align-items: center;
+      width: 100%;
+      margin: 0 0 10px;
+    }
+  }
+}
