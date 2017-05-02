@@ -5,7 +5,11 @@
     <div class="container">
       <!-- .top-bar START -->
       <div class="top-bar">
-        <a href="#login" class="top-bar__link">вход</a>
+        {% if loggedIn %}
+          <a href="profile.html" class="top-bar__link">Alex Grey</a>
+        {% else %}
+          <a href="login.html" class="top-bar__link">вход</a>
+        {% endif %}
         <a href="#cart" class="top-bar__link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.33 20.44" class="cart-icon">
             <path d="M5.81 6.33h8"/>

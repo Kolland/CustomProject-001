@@ -67,4 +67,19 @@
   $('.js-check-amount').on('change', activateBuyBtn);
   $('.js-check-amount').bind('keyup mouseup', activateBuyBtn);
 
+  /**
+   * Toggle radio buttons content
+   * @param {String} radioName - radio buttons name value
+   */
+  function toggleContent(radioName) {
+    var $content = $('[data-' + radioName + ']');
+    $('input[name="' + radioName + '"]').on('change', function() {
+      $content.css('height', '0px');
+      $content.filter('[data-' + radioName + '="' + this.value + '"]').css('height', 'auto');
+    });
+  }
+
+  toggleContent('pay-method');
+  toggleContent('shipping');
+
 })(jQuery);

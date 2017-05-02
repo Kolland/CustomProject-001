@@ -1,0 +1,36 @@
+.flex-grid {
+  display: flex;
+  position: relative;
+  .col {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    &--right {
+      align-items: flex-end;
+    }
+  }
+}
+
+.col-separator {
+  $top-offset: 25;
+  position: absolute;
+  top: $top-offset * 1px;
+  left: 50%;
+  width: 1px;
+  height: calc(100% - (#{$top-offset} * 1px));
+  background-color: #bdbdbd;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-grid {
+    display: block;
+    .col {
+      align-items: center;
+      width: 100%;
+      margin: 0 0 10px;
+    }
+  }
+}
