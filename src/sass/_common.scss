@@ -79,6 +79,7 @@ body {
   text-align: center;
   box-sizing: border-box;
   transition: transform 250ms ease-out;
+  cursor: pointer;
   &--green {
     background-color: $c-viridian;
   }
