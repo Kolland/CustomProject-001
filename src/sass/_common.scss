@@ -3,6 +3,13 @@ body {
   color: $text-color;
   font-family: $f-primary;
 }
+.clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
 .container {
   position: relative;
   width: 100%;
