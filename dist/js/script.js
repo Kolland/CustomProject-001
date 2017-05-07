@@ -39,7 +39,11 @@
     isPaused: false,
     id: null,
     init: function() {
+
       this.progress = document.querySelector('.swiper-progress');
+      if (!this.progress) {
+        return
+      }
       this.id = setInterval(this.updateProgress.bind(this), this.autoplayTime);
     },
     updateProgress: function() {
