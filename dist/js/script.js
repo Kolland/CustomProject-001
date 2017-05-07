@@ -16,12 +16,57 @@
       clone: true
     });
 
+
   // Swiper Slider
-  var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
+  var mySwiper = new Swiper('.swiper-container', {
     loop: true,
-    autoplay: 5000
-  })
+    autoplay: false,
+    speed: 1000,
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    effect: 'fade',
+    fade: {
+      crossFade: false
+    }
+  });
+
+  // Swiper Progress Bar
+  var autoplay = 10000;
+  var swiperProgress = {
+    progress: null,
+    width: 1,
+    autoplayTime: autoplay / 100,
+    isPaused: false,
+    id: null,
+    init: function() {
+      this.progress = document.querySelector('.swiper-progress');
+      this.id = setInterval(this.updateProgress.bind(this), this.autoplayTime);
+    },
+    updateProgress: function() {
+      if (!this.isPaused) {
+        if (this.width >= 100) {
+          mySwiper.slideNext();
+          this.width = 0;
+        } else {
+          this.width += 1;
+          this.progress.style.width = this.width + '%';
+        }
+      }
+    },
+    play: function() {
+      this.isPaused = false;
+    },
+    pause: function() {
+      this.isPaused = true;
+    }
+  };
+  swiperProgress.init();
+  // Swiper stop on hover
+  $('.swiper-container').hover(function() {
+    swiperProgress.pause();
+  }, function() {
+    swiperProgress.play();
+  });
 
   // Image to Background
   function changeImgToBg(imgSel, parentSel) {
@@ -58,7 +103,7 @@
   // Check amount of products to buy
   function activateBuyBtn() {
     var $btn = $(this).parents('tr').find('.ml-btn');
-    if (+$(this).val() !== 0 && $(this).val() !== '') {
+    if (+$(this).val() > 0 && $(this).val() !== '') {
       $btn.removeClass('ml-btn--disabled');
     } else {
       $btn.addClass('ml-btn--disabled');
@@ -94,5 +139,40 @@
     });
   }
   animateScroll($('.js-scroll-to'));
+
+  // Custom input='number' style
+  /**
+   * Controll input number
+   * @param {jQueryObject} $input - input for controll
+   * @param {String} dir - direction of controll ['up', 'down']
+   */
+  function numberControll($input, dir) {
+    var maxVal = $input.attr('max') ? +$input.attr('max') : 9999;
+    var minVal = $input.attr('min') ? +$input.attr('min') : -9999;
+    var val = $input.val();
+    switch (dir) {
+      case 'up':
+        val++;
+        if (val > maxVal) { return; }
+        break;
+      case 'down':
+        val--;
+        if (val < minVal) { return; }
+        break;
+    }
+    $input.val(val);
+    $input.trigger('change');
+  }
+  $('.js-number-plus').on('click', function(e) {
+    e.preventDefault();
+    var $input = $(this).parents().siblings('.custom-number__field');
+    numberControll($input, 'up');
+  });
+  $('.js-number-minus').on('click', function(e) {
+    e.preventDefault();
+    var $input = $(this).parents().siblings('.custom-number__field');
+    numberControll($input, 'down');
+  });
+
 
 })(jQuery);
